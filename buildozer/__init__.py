@@ -418,7 +418,12 @@ class Buildozer(object):
                      ', required by "version.regex"')
 
         orientation = get('app', 'orientation', 'landscape')
-        if orientation not in ('landscape', 'portrait', 'all', 'sensorLandscape'):
+        if orientation not in (
+            'all', 'behind', 'fullSensor', 'fullUser', 'landscape', 'locked',
+            'nosensor', 'portrait', 'reverseLandscape', 'reversePortrait',
+            'sensor', 'sensorLandscape', 'sensorPortrait', 'unspecified',
+            'user', 'userLandscape', 'userPortrait',
+        ):
             adderror('[app] "orientation" have an invalid value')
 
         if errors:
